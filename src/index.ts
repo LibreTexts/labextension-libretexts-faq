@@ -14,7 +14,8 @@ const extension: JupyterFrontEndPlugin<void> = {
       label: 'LibreTexts JupyterHub FAQ',
       execute: () => {
         return app.commands.execute('help:open', {
-          url: 'https://jupyter.libretexts.org/hub/static/external/pages/faq.html',
+          url:
+            'https://jupyter.libretexts.org/hub/static/external/pages/faq.html',
           text: 'LibreTexts JupyterHub FAQ'
         });
       }
