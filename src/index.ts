@@ -9,6 +9,10 @@ import { ICommandPalette } from '@jupyterlab/apputils';
 
 import { ILauncher } from '@jupyterlab/launcher';
 
+import { LabIcon } from '@jupyterlab/ui-components';
+
+import LibreTextsIconSVG from '../style/icons/libretexts.svg';
+
 const extension: JupyterFrontEndPlugin<void> = {
   id: 'labextension-libretexts-faq',
   autoStart: true,
@@ -16,6 +20,10 @@ const extension: JupyterFrontEndPlugin<void> = {
   activate: (app: JupyterFrontEnd, mainMenu: IMainMenu, palette: ICommandPalette, launcher: ILauncher) => {
     app.commands.addCommand('libretexts-open-faq', {
       label: 'LibreTexts JupyterHub FAQ',
+      icon: new LabIcon({
+        name: 'libretexts-icon',
+        svgstr: LibreTextsIconSVG
+      }),
       execute: () => {
         return app.commands.execute('help:open', {
           url: '/hub/faq',
