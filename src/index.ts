@@ -5,11 +5,15 @@ import {
 
 import { IMainMenu } from '@jupyterlab/mainmenu';
 
+import { ICommandPalette } from '@jupyterlab/apputils';
+
+import { ILauncher } from '@jupyterlab/launcher';
+
 const extension: JupyterFrontEndPlugin<void> = {
   id: 'labextension-libretexts-faq',
   autoStart: true,
-  requires: [IMainMenu],
-  activate: (app: JupyterFrontEnd, mainMenu: IMainMenu) => {
+  requires: [IMainMenu, ICommandPalette, ILauncher],
+  activate: (app: JupyterFrontEnd, mainMenu: IMainMenu, palette: ICommandPalette, launcher: ILauncher) => {
     app.commands.addCommand('libretexts-open-faq', {
       label: 'LibreTexts JupyterHub FAQ',
       execute: () => {
@@ -20,6 +24,8 @@ const extension: JupyterFrontEndPlugin<void> = {
       }
     });
     mainMenu.helpMenu.addGroup([{ command: 'libretexts-open-faq' }], 0);
+    palette.addItem({ command: 'libretexts-open-faq', category: 'Help' });
+    launcher.add({ command: 'libretexts-open-faq', category: 'Other' });
   }
 };
 
