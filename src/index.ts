@@ -17,7 +17,12 @@ const extension: JupyterFrontEndPlugin<void> = {
   id: 'labextension-libretexts-faq',
   autoStart: true,
   requires: [IMainMenu, ICommandPalette, ILauncher],
-  activate: (app: JupyterFrontEnd, mainMenu: IMainMenu, palette: ICommandPalette, launcher: ILauncher) => {
+  activate: (
+    app: JupyterFrontEnd,
+    mainMenu: IMainMenu,
+    palette: ICommandPalette,
+    launcher: ILauncher
+  ) => {
     app.commands.addCommand('libretexts-open-faq', {
       label: 'LibreTexts JupyterHub FAQ',
       icon: new LabIcon({
