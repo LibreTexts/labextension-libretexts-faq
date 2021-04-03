@@ -70,7 +70,13 @@
   ],
   "jupyterlab": {
     "extension": true,
-    "outputDir": "labextension-libretexts-faq/labextension"
+    "outputDir": "labextension-libretexts-faq/labextension",
+    "sharedPackages": {
+        "@jupyter-widgets/base": {
+            "bundled": false,
+            "singleton": true
+        }
+    }
   },
   "styleModule": "style/index.js"
 }
