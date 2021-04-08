@@ -1,6 +1,6 @@
 {
   "name": "labextension-libretexts-faq",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Add a LibreTexts FAQ link under the Help menu.",
   "keywords": [
     "jupyter",
