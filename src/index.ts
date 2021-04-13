@@ -39,7 +39,9 @@ const extension: JupyterFrontEndPlugin<void> = {
     mainMenu.helpMenu.addGroup([{ command: 'libretexts-open-faq' }], 0);
     palette.addItem({ command: 'libretexts-open-faq', category: 'Help' });
     launcher.add({ command: 'libretexts-open-faq', category: 'Other' });
-    console.log('JupyterLab extension labextension-libretexts-faq is activated!');
+    console.log(
+      'JupyterLab extension labextension-libretexts-faq is activated!'
+    );
   }
 };
 
