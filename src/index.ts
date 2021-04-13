@@ -14,7 +14,7 @@ import { LabIcon } from '@jupyterlab/ui-components';
 import LibreTextsIconSVG from '../style/icons/libretexts.svg';
 
 const extension: JupyterFrontEndPlugin<void> = {
-  id: 'labextension-libretexts-faq',
+  id: 'labextension-libretexts-faq:plugin',
   autoStart: true,
   requires: [IMainMenu, ICommandPalette, ILauncher],
   activate: (
@@ -39,6 +39,9 @@ const extension: JupyterFrontEndPlugin<void> = {
     mainMenu.helpMenu.addGroup([{ command: 'libretexts-open-faq' }], 0);
     palette.addItem({ command: 'libretexts-open-faq', category: 'Help' });
     launcher.add({ command: 'libretexts-open-faq', category: 'Other' });
+    console.log(
+      'JupyterLab extension labextension-libretexts-faq is activated!'
+    );
   }
 };
 
