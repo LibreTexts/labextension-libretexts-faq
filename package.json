@@ -1,6 +1,6 @@
 {
   "name": "labextension-libretexts-faq",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Add a LibreTexts FAQ link under the Help menu.",
   "keywords": [
     "jupyter",
@@ -13,8 +13,8 @@
   },
   "license": "BSD-3-Clause",
   "author": {
-      "name": "rkevin",
-      "email": "jupyterteam@ucdavis.edu"
+    "name": "rkevin",
+    "email": "jupyterteam@ucdavis.edu"
   },
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
@@ -50,7 +50,11 @@
     "@jupyterlab/application": "^3.0.7",
     "@jupyterlab/apputils": "^3.0.5",
     "@jupyterlab/launcher": "^3.0.5",
-    "@jupyterlab/mainmenu": "^3.0.5"
+    "@jupyterlab/mainmenu": "^3.0.5",
+    "codemirror": "^5.58.2",
+    "postcss": "^8.2.10",
+    "sanitize-html": "^2.3.2",
+    "url-parse": "^1.5.0"
   },
   "devDependencies": {
     "@jupyterlab/builder": "^3.0.0",
@@ -72,10 +76,10 @@
     "extension": true,
     "outputDir": "labextension-libretexts-faq/labextension",
     "sharedPackages": {
-        "@jupyter-widgets/base": {
-            "bundled": false,
-            "singleton": true
-        }
+      "@jupyter-widgets/base": {
+        "bundled": false,
+        "singleton": true
+      }
     }
   },
   "styleModule": "style/index.js"
